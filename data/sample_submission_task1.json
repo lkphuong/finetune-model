@@ -1,0 +1,16 @@
+[
+    {
+        "output":{
+            "total_score": 0,
+            "rubric": {
+                "complexity":0,
+                "io_format":0,
+                "compilable": 0,
+                "edge_case": 0,
+                "code_quality": 0,
+                "logic":0
+            }
+        },
+        "sample_id": "Class03-Final-1-S01"
+    }
+]

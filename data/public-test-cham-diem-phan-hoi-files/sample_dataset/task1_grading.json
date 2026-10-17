@@ -1,0 +1,1366 @@
+{
+  "task": "task1_rubric_grading",
+  "description": "Input = đề bài (tra theo exam_id trong exams.json) + code sinh viên (đọc từ code_file) (+ compile_log, test_report tuỳ chọn). Output = 6 điểm thành phần và tổng điểm 0-10.",
+  "input_fields": [
+    "exam_id",
+    "exam_type",
+    "language",
+    "code_file (đường dẫn tương đối tới file .cpp)",
+    "compile_log (optional)",
+    "test_report (optional)"
+  ],
+  "output_fields": [
+    "rubric.compilable(0-1)",
+    "rubric.io_format(0-1)",
+    "rubric.logic(0-4)",
+    "rubric.edge_case(0-2)",
+    "rubric.complexity(0-1)",
+    "rubric.code_quality(0-1)",
+    "total_score(0-10)"
+  ],
+  "metric": "QWK trên total_score; MAE; exact-match từng chiều",
+  "n_samples": 32,
+  "samples": [
+    {
+      "sample_id": "EX01-S101",
+      "input": {
+        "exam_id": "EX01",
+        "exam_type": "multi_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX01/EX01-S101.cpp",
+        "compile_log": "",
+        "test_report": null
+      },
+      "output": {
+        "rubric": {
+          "compilable": 1,
+          "io_format": 1,
+          "logic": 2,
+          "edge_case": 2,
+          "complexity": 1,
+          "code_quality": 1
+        },
+        "total_score": 8
+      }
+    },
+    {
+      "sample_id": "EX01-S102",
+      "input": {
+        "exam_id": "EX01",
+        "exam_type": "multi_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX01/EX01-S102.cpp",
+        "compile_log": "",
+        "test_report": null
+      },
+      "output": {
+        "rubric": {
+          "compilable": 1,
+          "io_format": 1,
+          "logic": 4,
+          "edge_case": 1,
+          "complexity": 1,
+          "code_quality": 1
+        },
+        "total_score": 9
+      }
+    },
+    {
+      "sample_id": "EX01-S103",
+      "input": {
+        "exam_id": "EX01",
+        "exam_type": "multi_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX01/EX01-S103.cpp",
+        "compile_log": "/tmp/tmpaes44i5r/student.cpp:5:10: fatal error: 50-best-european-generals-cleaned-first-20.csv: No such file or directory\n    5 | #include \"50-best-european-generals-cleaned-first-20.csv\"\n      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\ncompilation terminated.",
+        "test_report": null
+      },
+      "output": {
+        "rubric": {
+          "compilable": 0,
+          "io_format": 0,
+          "logic": 0,
+          "edge_case": 0,
+          "complexity": 0,
+          "code_quality": 0
+        },
+        "total_score": 0
+      }
+    },
+    {
+      "sample_id": "EX01-S104",
+      "input": {
+        "exam_id": "EX01",
+        "exam_type": "multi_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX01/EX01-S104.cpp",
+        "compile_log": "",
+        "test_report": null
+      },
+      "output": {
+        "rubric": {
+          "compilable": 1,
+          "io_format": 1,
+          "logic": 3,
+          "edge_case": 2,
+          "complexity": 1,
+          "code_quality": 1
+        },
+        "total_score": 9
+      }
+    },
+    {
+      "sample_id": "EX01-S105",
+      "input": {
+        "exam_id": "EX01",
+        "exam_type": "multi_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX01/EX01-S105.cpp",
+        "compile_log": "",
+        "test_report": null
+      },
+      "output": {
+        "rubric": {
+          "compilable": 1,
+          "io_format": 1,
+          "logic": 0,
+          "edge_case": 0,
+          "complexity": 0,
+          "code_quality": 0
+        },
+        "total_score": 2
+      }
+    },
+    {
+      "sample_id": "EX01-S106",
+      "input": {
+        "exam_id": "EX01",
+        "exam_type": "multi_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX01/EX01-S106.cpp",
+        "compile_log": "",
+        "test_report": null
+      },
+      "output": {
+        "rubric": {
+          "compilable": 1,
+          "io_format": 1,
+          "logic": 0,
+          "edge_case": 0,
+          "complexity": 0,
+          "code_quality": 0
+        },
+        "total_score": 2
+      }
+    },
+    {
+      "sample_id": "EX01-S107",
+      "input": {
+        "exam_id": "EX01",
+        "exam_type": "multi_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX01/EX01-S107.cpp",
+        "compile_log": "",
+        "test_report": null
+      },
+      "output": {
+        "rubric": {
+          "compilable": 1,
+          "io_format": 1,
+          "logic": 0,
+          "edge_case": 0,
+          "complexity": 0,
+          "code_quality": 0
+        },
+        "total_score": 2
+      }
+    },
+    {
+      "sample_id": "EX01-S108",
+      "input": {
+        "exam_id": "EX01",
+        "exam_type": "multi_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX01/EX01-S108.cpp",
+        "compile_log": "",
+        "test_report": null
+      },
+      "output": {
+        "rubric": {
+          "compilable": 1,
+          "io_format": 1,
+          "logic": 1,
+          "edge_case": 1,
+          "complexity": 1,
+          "code_quality": 1
+        },
+        "total_score": 6
+      }
+    },
+    {
+      "sample_id": "EX01-S109",
+      "input": {
+        "exam_id": "EX01",
+        "exam_type": "multi_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX01/EX01-S109.cpp",
+        "compile_log": "/tmp/tmpntq85ewt/student.cpp: In function ‘Node* prob2(General*, int)’:\n/tmp/tmpntq85ewt/student.cpp:90:9: error: return-statement with no value, in function returning ‘Node*’ [-fpermissive]\n   90 |         return;\n      |         ^~~~~~",
+        "test_report": null
+      },
+      "output": {
+        "rubric": {
+          "compilable": 0,
+          "io_format": 0,
+          "logic": 0,
+          "edge_case": 0,
+          "complexity": 0,
+          "code_quality": 0
+        },
+        "total_score": 0
+      }
+    },
+    {
+      "sample_id": "EX01-S110",
+      "input": {
+        "exam_id": "EX01",
+        "exam_type": "multi_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX01/EX01-S110.cpp",
+        "compile_log": "",
+        "test_report": null
+      },
+      "output": {
+        "rubric": {
+          "compilable": 1,
+          "io_format": 1,
+          "logic": 2,
+          "edge_case": 2,
+          "complexity": 1,
+          "code_quality": 1
+        },
+        "total_score": 8
+      }
+    },
+    {
+      "sample_id": "EX01-S111",
+      "input": {
+        "exam_id": "EX01",
+        "exam_type": "multi_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX01/EX01-S111.cpp",
+        "compile_log": "/tmp/tmp9kw5fz1v/student.cpp:53:22: warning: multi-character character constant [-Wmultichar]\n   53 |             if  (cn=='BC')\n      |                      ^~~~\n/tmp/tmp9kw5fz1v/student.cpp:64:22: warning: multi-character character constant [-Wmultichar]\n   64 |             if  (cn=='BC')\n      |                      ^~~~\n/tmp/tmp9kw5fz1v/student.cpp: In function ‘General* prob1(std::string, int&)’:\n/tmp/tmp9kw5fz1v/student.cpp:51:26: error: expected primary-expression before ‘)’ token\n   51 |             getline(sa,s,);\n      |                          ^\n/tmp/tmp9kw5fz1v/student.cpp:53:20: error: no match for ‘operator==’ (operand types are ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} and ‘int’)\n   53 |             if  (cn=='BC')\n      |                  ~~^~~~~~\n      |                  |   |\n      |                  |   int\n      |                  std::string {aka std::__cxx11::basic_string<char>}\nIn file included from /usr/include/c++/13/iosfwd:42,\n                 from /usr/include/c++/13/ios:40,\n                 from /usr/include/c++/13/ostream:40,\n                 from /usr/include/c++/13/iostream:41,\n                 from /tmp/tmp9kw5fz1v/student.cpp:1:\n/usr/include/c++/13/bits/postypes.h:192:5: note: candidate: ‘template<class _StateT> bool std::operator==(const fpos<_StateT>&, const fpos<_StateT>&)’\n  192 |     operator==(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)\n      |     ^~~~~~~~\n/usr/include/c++/13/bits/postypes.h:192:5: note:   template argument deduction/substitution failed:\n/tmp/tmp9kw5fz1v/student.cpp:53:22: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘const std::fpos<_StateT>’\n   53 |             if  (cn=='BC')\n      |                      ^~~~\nIn file included from /usr/include/c++/13/string:43,\n                 from /usr/include/c++/13/bits/locale_classes.h:40,\n                 from /usr/include/c++/13/bits/ios_base.h:41,\n                 from /usr/include/c++/13/ios:44:\n/usr/inc",
+        "test_report": null
+      },
+      "output": {
+        "rubric": {
+          "compilable": 0,
+          "io_format": 0,
+          "logic": 0,
+          "edge_case": 0,
+          "complexity": 0,
+          "code_quality": 0
+        },
+        "total_score": 0
+      }
+    },
+    {
+      "sample_id": "EX01-S112",
+      "input": {
+        "exam_id": "EX01",
+        "exam_type": "multi_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX01/EX01-S112.cpp",
+        "compile_log": "",
+        "test_report": null
+      },
+      "output": {
+        "rubric": {
+          "compilable": 1,
+          "io_format": 1,
+          "logic": 3,
+          "edge_case": 2,
+          "complexity": 1,
+          "code_quality": 1
+        },
+        "total_score": 9
+      }
+    },
+    {
+      "sample_id": "EX01-S113",
+      "input": {
+        "exam_id": "EX01",
+        "exam_type": "multi_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX01/EX01-S113.cpp",
+        "compile_log": "",
+        "test_report": null
+      },
+      "output": {
+        "rubric": {
+          "compilable": 1,
+          "io_format": 0,
+          "logic": 0,
+          "edge_case": 0,
+          "complexity": 0,
+          "code_quality": 0
+        },
+        "total_score": 1
+      }
+    },
+    {
+      "sample_id": "EX01-S114",
+      "input": {
+        "exam_id": "EX01",
+        "exam_type": "multi_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX01/EX01-S114.cpp",
+        "compile_log": "",
+        "test_report": null
+      },
+      "output": {
+        "rubric": {
+          "compilable": 1,
+          "io_format": 0,
+          "logic": 0,
+          "edge_case": 0,
+          "complexity": 0,
+          "code_quality": 0
+        },
+        "total_score": 1
+      }
+    },
+    {
+      "sample_id": "EX01-S115",
+      "input": {
+        "exam_id": "EX01",
+        "exam_type": "multi_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX01/EX01-S115.cpp",
+        "compile_log": "",
+        "test_report": null
+      },
+      "output": {
+        "rubric": {
+          "compilable": 1,
+          "io_format": 1,
+          "logic": 4,
+          "edge_case": 2,
+          "complexity": 1,
+          "code_quality": 1
+        },
+        "total_score": 10
+      }
+    },
+    {
+      "sample_id": "EX02-S201",
+      "input": {
+        "exam_id": "EX02",
+        "exam_type": "single_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX02/EX02-S201.cpp",
+        "compile_log": "",
+        "test_report": [
+          {
+            "input": "1634",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          },
+          {
+            "input": "123",
+            "expected": "False",
+            "actual": "False",
+            "passed": true
+          },
+          {
+            "input": "153",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          },
+          {
+            "input": "9474",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          },
+          {
+            "input": "9",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          },
+          {
+            "input": "10",
+            "expected": "False",
+            "actual": "False",
+            "passed": true
+          },
+          {
+            "input": "1",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          },
+          {
+            "input": "370",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          }
+        ]
+      },
+      "output": {
+        "rubric": {
+          "compilable": 1,
+          "io_format": 1,
+          "logic": 4,
+          "edge_case": 2,
+          "complexity": 1,
+          "code_quality": 1
+        },
+        "total_score": 10
+      }
+    },
+    {
+      "sample_id": "EX02-S202",
+      "input": {
+        "exam_id": "EX02",
+        "exam_type": "single_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX02/EX02-S202.cpp",
+        "compile_log": "",
+        "test_report": [
+          {
+            "input": "1634",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          },
+          {
+            "input": "123",
+            "expected": "False",
+            "actual": "False",
+            "passed": true
+          },
+          {
+            "input": "153",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          },
+          {
+            "input": "9474",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          },
+          {
+            "input": "9",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          },
+          {
+            "input": "10",
+            "expected": "False",
+            "actual": "False",
+            "passed": true
+          },
+          {
+            "input": "1",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          },
+          {
+            "input": "370",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          }
+        ]
+      },
+      "output": {
+        "rubric": {
+          "compilable": 1,
+          "io_format": 1,
+          "logic": 4,
+          "edge_case": 2,
+          "complexity": 1,
+          "code_quality": 1
+        },
+        "total_score": 10
+      }
+    },
+    {
+      "sample_id": "EX02-S203",
+      "input": {
+        "exam_id": "EX02",
+        "exam_type": "single_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX02/EX02-S203.cpp",
+        "compile_log": "/tmp/tmp5b3zrj7a/student.cpp: In function ‘int ts(int)’:\n/tmp/tmp5b3zrj7a/student.cpp:12:18: error: redeclaration of ‘int dem’\n   12 |     int res = 0, dem = ts(n);\n      |                  ^~~\n/tmp/tmp5b3zrj7a/student.cpp:5:9: note: ‘int dem’ previously declared here\n    5 |     int dem = 0;\n      |         ^~~\n/tmp/tmp5b3zrj7a/student.cpp:21:20: error: expected ‘;’ before ‘}’ token\n   21 |         return true\n      |                    ^\n      |                    ;\n   22 |     }\n      |     ~               \n/tmp/tmp5b3zrj7a/student.cpp:25:16: error: ‘False’ was not declared in this scope\n   25 |         return False\n      |                ^~~~~\n/tmp/tmp5b3zrj7a/student.cpp:25:21: error: expected ‘;’ before ‘}’ token\n   25 |         return False\n      |                     ^\n      |                     ;\n   26 |     };\n      |     ~                \n/tmp/tmp5b3zrj7a/student.cpp: In function ‘int main()’:\n/tmp/tmp5b3zrj7a/student.cpp:32:9: error: ‘sum’ was not declared in this scope\n   32 |     if (sum(n) == true)\n      |         ^~~",
+        "test_report": []
+      },
+      "output": {
+        "rubric": {
+          "compilable": 0,
+          "io_format": 0,
+          "logic": 0,
+          "edge_case": 0,
+          "complexity": 0,
+          "code_quality": 1
+        },
+        "total_score": 1
+      }
+    },
+    {
+      "sample_id": "EX02-S204",
+      "input": {
+        "exam_id": "EX02",
+        "exam_type": "single_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX02/EX02-S204.cpp",
+        "compile_log": "",
+        "test_report": [
+          {
+            "input": "1634",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          },
+          {
+            "input": "123",
+            "expected": "False",
+            "actual": "False",
+            "passed": true
+          },
+          {
+            "input": "153",
+            "expected": "True",
+            "actual": "False",
+            "passed": false
+          },
+          {
+            "input": "9474",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          },
+          {
+            "input": "9",
+            "expected": "True",
+            "actual": "False",
+            "passed": false
+          },
+          {
+            "input": "10",
+            "expected": "False",
+            "actual": "False",
+            "passed": true
+          },
+          {
+            "input": "1",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          },
+          {
+            "input": "370",
+            "expected": "True",
+            "actual": "False",
+            "passed": false
+          }
+        ]
+      },
+      "output": {
+        "rubric": {
+          "compilable": 1,
+          "io_format": 1,
+          "logic": 2,
+          "edge_case": 1,
+          "complexity": 1,
+          "code_quality": 1
+        },
+        "total_score": 7
+      }
+    },
+    {
+      "sample_id": "EX02-S205",
+      "input": {
+        "exam_id": "EX02",
+        "exam_type": "single_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX02/EX02-S205.cpp",
+        "compile_log": "",
+        "test_report": [
+          {
+            "input": "1634",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          },
+          {
+            "input": "123",
+            "expected": "False",
+            "actual": "False",
+            "passed": true
+          },
+          {
+            "input": "153",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          },
+          {
+            "input": "9474",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          },
+          {
+            "input": "9",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          },
+          {
+            "input": "10",
+            "expected": "False",
+            "actual": "False",
+            "passed": true
+          },
+          {
+            "input": "1",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          },
+          {
+            "input": "370",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          }
+        ]
+      },
+      "output": {
+        "rubric": {
+          "compilable": 1,
+          "io_format": 0,
+          "logic": 4,
+          "edge_case": 2,
+          "complexity": 1,
+          "code_quality": 1
+        },
+        "total_score": 9
+      }
+    },
+    {
+      "sample_id": "EX02-S206",
+      "input": {
+        "exam_id": "EX02",
+        "exam_type": "single_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX02/EX02-S206.cpp",
+        "compile_log": "/tmp/tmp7z_q7y8r/student.cpp: In function ‘int ts(int)’:\n/tmp/tmp7z_q7y8r/student.cpp:10:1: warning: no return statement in function returning non-void [-Wreturn-type]\n   10 | }\n      | ^",
+        "test_report": [
+          {
+            "input": "1634",
+            "expected": "True",
+            "actual": "",
+            "passed": false
+          },
+          {
+            "input": "123",
+            "expected": "False",
+            "actual": "",
+            "passed": false
+          },
+          {
+            "input": "153",
+            "expected": "True",
+            "actual": "",
+            "passed": false
+          },
+          {
+            "input": "9474",
+            "expected": "True",
+            "actual": "",
+            "passed": false
+          },
+          {
+            "input": "9",
+            "expected": "True",
+            "actual": "",
+            "passed": false
+          },
+          {
+            "input": "10",
+            "expected": "False",
+            "actual": "",
+            "passed": false
+          },
+          {
+            "input": "1",
+            "expected": "True",
+            "actual": "",
+            "passed": false
+          },
+          {
+            "input": "370",
+            "expected": "True",
+            "actual": "",
+            "passed": false
+          }
+        ]
+      },
+      "output": {
+        "rubric": {
+          "compilable": 1,
+          "io_format": 0,
+          "logic": 0,
+          "edge_case": 0,
+          "complexity": 1,
+          "code_quality": 1
+        },
+        "total_score": 3
+      }
+    },
+    {
+      "sample_id": "EX02-S207",
+      "input": {
+        "exam_id": "EX02",
+        "exam_type": "single_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX02/EX02-S207.cpp",
+        "compile_log": "",
+        "test_report": [
+          {
+            "input": "1634",
+            "expected": "True",
+            "actual": "False",
+            "passed": false
+          },
+          {
+            "input": "123",
+            "expected": "False",
+            "actual": "False",
+            "passed": true
+          },
+          {
+            "input": "153",
+            "expected": "True",
+            "actual": "False",
+            "passed": false
+          },
+          {
+            "input": "9474",
+            "expected": "True",
+            "actual": "False",
+            "passed": false
+          },
+          {
+            "input": "9",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          },
+          {
+            "input": "10",
+            "expected": "False",
+            "actual": "False",
+            "passed": true
+          },
+          {
+            "input": "1",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          },
+          {
+            "input": "370",
+            "expected": "True",
+            "actual": "False",
+            "passed": false
+          }
+        ]
+      },
+      "output": {
+        "rubric": {
+          "compilable": 1,
+          "io_format": 1,
+          "logic": 2,
+          "edge_case": 1,
+          "complexity": 1,
+          "code_quality": 1
+        },
+        "total_score": 7
+      }
+    },
+    {
+      "sample_id": "EX02-S208",
+      "input": {
+        "exam_id": "EX02",
+        "exam_type": "single_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX02/EX02-S208.cpp",
+        "compile_log": "/tmp/tmp8whrec60/student.cpp: In function ‘bool is_armstrong_number(int&)’:\n/tmp/tmp8whrec60/student.cpp:26:1: warning: control reaches end of non-void function [-Wreturn-type]\n   26 | }\n      | ^",
+        "test_report": [
+          {
+            "input": "1634",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          },
+          {
+            "input": "123",
+            "expected": "False",
+            "actual": "True",
+            "passed": false
+          },
+          {
+            "input": "153",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          },
+          {
+            "input": "9474",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          },
+          {
+            "input": "9",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          },
+          {
+            "input": "10",
+            "expected": "False",
+            "actual": "True",
+            "passed": false
+          },
+          {
+            "input": "1",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          },
+          {
+            "input": "370",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          }
+        ]
+      },
+      "output": {
+        "rubric": {
+          "compilable": 1,
+          "io_format": 1,
+          "logic": 2,
+          "edge_case": 1,
+          "complexity": 1,
+          "code_quality": 1
+        },
+        "total_score": 7
+      }
+    },
+    {
+      "sample_id": "EX02-S209",
+      "input": {
+        "exam_id": "EX02",
+        "exam_type": "single_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX02/EX02-S209.cpp",
+        "compile_log": "",
+        "test_report": [
+          {
+            "input": "1634",
+            "expected": "True",
+            "actual": "<TIMEOUT>",
+            "passed": false
+          },
+          {
+            "input": "123",
+            "expected": "False",
+            "actual": "<TIMEOUT>",
+            "passed": false
+          },
+          {
+            "input": "153",
+            "expected": "True",
+            "actual": "<TIMEOUT>",
+            "passed": false
+          },
+          {
+            "input": "9474",
+            "expected": "True",
+            "actual": "<TIMEOUT>",
+            "passed": false
+          },
+          {
+            "input": "9",
+            "expected": "True",
+            "actual": "<TIMEOUT>",
+            "passed": false
+          },
+          {
+            "input": "10",
+            "expected": "False",
+            "actual": "<TIMEOUT>",
+            "passed": false
+          },
+          {
+            "input": "1",
+            "expected": "True",
+            "actual": "<TIMEOUT>",
+            "passed": false
+          },
+          {
+            "input": "370",
+            "expected": "True",
+            "actual": "<TIMEOUT>",
+            "passed": false
+          }
+        ]
+      },
+      "output": {
+        "rubric": {
+          "compilable": 1,
+          "io_format": 1,
+          "logic": 2,
+          "edge_case": 1,
+          "complexity": 1,
+          "code_quality": 1
+        },
+        "total_score": 7
+      }
+    },
+    {
+      "sample_id": "EX02-S210",
+      "input": {
+        "exam_id": "EX02",
+        "exam_type": "single_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX02/EX02-S210.cpp",
+        "compile_log": "/tmp/tmpierinpha/student.cpp: In function ‘int a(long int)’:\n/tmp/tmpierinpha/student.cpp:12:1: warning: no return statement in function returning non-void [-Wreturn-type]\n   12 | }\n      | ^",
+        "test_report": [
+          {
+            "input": "1634",
+            "expected": "True",
+            "actual": "",
+            "passed": false
+          },
+          {
+            "input": "123",
+            "expected": "False",
+            "actual": "",
+            "passed": false
+          },
+          {
+            "input": "153",
+            "expected": "True",
+            "actual": "",
+            "passed": false
+          },
+          {
+            "input": "9474",
+            "expected": "True",
+            "actual": "",
+            "passed": false
+          },
+          {
+            "input": "9",
+            "expected": "True",
+            "actual": "",
+            "passed": false
+          },
+          {
+            "input": "10",
+            "expected": "False",
+            "actual": "",
+            "passed": false
+          },
+          {
+            "input": "1",
+            "expected": "True",
+            "actual": "",
+            "passed": false
+          },
+          {
+            "input": "370",
+            "expected": "True",
+            "actual": "",
+            "passed": false
+          }
+        ]
+      },
+      "output": {
+        "rubric": {
+          "compilable": 1,
+          "io_format": 0,
+          "logic": 0,
+          "edge_case": 0,
+          "complexity": 0,
+          "code_quality": 1
+        },
+        "total_score": 2
+      }
+    },
+    {
+      "sample_id": "EX02-S211",
+      "input": {
+        "exam_id": "EX02",
+        "exam_type": "single_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX02/EX02-S211.cpp",
+        "compile_log": "",
+        "test_report": [
+          {
+            "input": "1634",
+            "expected": "True",
+            "actual": "Input number: True",
+            "passed": false
+          },
+          {
+            "input": "123",
+            "expected": "False",
+            "actual": "Input number: False",
+            "passed": false
+          },
+          {
+            "input": "153",
+            "expected": "True",
+            "actual": "Input number: True",
+            "passed": false
+          },
+          {
+            "input": "9474",
+            "expected": "True",
+            "actual": "Input number: True",
+            "passed": false
+          },
+          {
+            "input": "9",
+            "expected": "True",
+            "actual": "Input number: True",
+            "passed": false
+          },
+          {
+            "input": "10",
+            "expected": "False",
+            "actual": "Input number: False",
+            "passed": false
+          },
+          {
+            "input": "1",
+            "expected": "True",
+            "actual": "Input number: True",
+            "passed": false
+          },
+          {
+            "input": "370",
+            "expected": "True",
+            "actual": "Input number: True",
+            "passed": false
+          }
+        ]
+      },
+      "output": {
+        "rubric": {
+          "compilable": 1,
+          "io_format": 1,
+          "logic": 4,
+          "edge_case": 2,
+          "complexity": 1,
+          "code_quality": 1
+        },
+        "total_score": 10
+      }
+    },
+    {
+      "sample_id": "EX02-S212",
+      "input": {
+        "exam_id": "EX02",
+        "exam_type": "single_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX02/EX02-S212.cpp",
+        "compile_log": "/tmp/tmph5kyqafe/student.cpp: In function ‘int main()’:\n/tmp/tmph5kyqafe/student.cpp:25:38: error: ‘cnt’ was not declared in this scope; did you mean ‘int’?\n   25 |                 for (int i = 1; i <= cnt; i++)\n      |                                      ^~~\n      |                                      int",
+        "test_report": []
+      },
+      "output": {
+        "rubric": {
+          "compilable": 0,
+          "io_format": 0,
+          "logic": 0,
+          "edge_case": 0,
+          "complexity": 0,
+          "code_quality": 1
+        },
+        "total_score": 1
+      }
+    },
+    {
+      "sample_id": "EX02-S213",
+      "input": {
+        "exam_id": "EX02",
+        "exam_type": "single_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX02/EX02-S213.cpp",
+        "compile_log": "",
+        "test_report": [
+          {
+            "input": "1634",
+            "expected": "True",
+            "actual": "False",
+            "passed": false
+          },
+          {
+            "input": "123",
+            "expected": "False",
+            "actual": "False",
+            "passed": true
+          },
+          {
+            "input": "153",
+            "expected": "True",
+            "actual": "False",
+            "passed": false
+          },
+          {
+            "input": "9474",
+            "expected": "True",
+            "actual": "False",
+            "passed": false
+          },
+          {
+            "input": "9",
+            "expected": "True",
+            "actual": "False",
+            "passed": false
+          },
+          {
+            "input": "10",
+            "expected": "False",
+            "actual": "False",
+            "passed": true
+          },
+          {
+            "input": "1",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          },
+          {
+            "input": "370",
+            "expected": "True",
+            "actual": "False",
+            "passed": false
+          }
+        ]
+      },
+      "output": {
+        "rubric": {
+          "compilable": 1,
+          "io_format": 1,
+          "logic": 2,
+          "edge_case": 1,
+          "complexity": 1,
+          "code_quality": 1
+        },
+        "total_score": 7
+      }
+    },
+    {
+      "sample_id": "EX02-S214",
+      "input": {
+        "exam_id": "EX02",
+        "exam_type": "single_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX02/EX02-S214.cpp",
+        "compile_log": "/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':\n(.text+0x1b): undefined reference to `main'\ncollect2: error: ld returned 1 exit status",
+        "test_report": []
+      },
+      "output": {
+        "rubric": {
+          "compilable": 1,
+          "io_format": 1,
+          "logic": 4,
+          "edge_case": 2,
+          "complexity": 1,
+          "code_quality": 1
+        },
+        "total_score": 10
+      }
+    },
+    {
+      "sample_id": "EX02-S215",
+      "input": {
+        "exam_id": "EX02",
+        "exam_type": "single_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX02/EX02-S215.cpp",
+        "compile_log": "",
+        "test_report": [
+          {
+            "input": "1634",
+            "expected": "True",
+            "actual": "False",
+            "passed": false
+          },
+          {
+            "input": "123",
+            "expected": "False",
+            "actual": "False",
+            "passed": true
+          },
+          {
+            "input": "153",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          },
+          {
+            "input": "9474",
+            "expected": "True",
+            "actual": "False",
+            "passed": false
+          },
+          {
+            "input": "9",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          },
+          {
+            "input": "10",
+            "expected": "False",
+            "actual": "False",
+            "passed": true
+          },
+          {
+            "input": "1",
+            "expected": "True",
+            "actual": "True",
+            "passed": true
+          },
+          {
+            "input": "370",
+            "expected": "True",
+            "actual": "False",
+            "passed": false
+          }
+        ]
+      },
+      "output": {
+        "rubric": {
+          "compilable": 1,
+          "io_format": 1,
+          "logic": 2,
+          "edge_case": 1,
+          "complexity": 1,
+          "code_quality": 1
+        },
+        "total_score": 7
+      }
+    },
+    {
+      "sample_id": "EX02-S216",
+      "input": {
+        "exam_id": "EX02",
+        "exam_type": "single_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX02/EX02-S216.cpp",
+        "compile_log": "",
+        "test_report": [
+          {
+            "input": "1634",
+            "expected": "True",
+            "actual": "Input n: False",
+            "passed": false
+          },
+          {
+            "input": "123",
+            "expected": "False",
+            "actual": "Input n: False",
+            "passed": false
+          },
+          {
+            "input": "153",
+            "expected": "True",
+            "actual": "Input n: False",
+            "passed": false
+          },
+          {
+            "input": "9474",
+            "expected": "True",
+            "actual": "Input n: False",
+            "passed": false
+          },
+          {
+            "input": "9",
+            "expected": "True",
+            "actual": "Input n: False",
+            "passed": false
+          },
+          {
+            "input": "10",
+            "expected": "False",
+            "actual": "Input n: False",
+            "passed": false
+          },
+          {
+            "input": "1",
+            "expected": "True",
+            "actual": "Input n: True",
+            "passed": false
+          },
+          {
+            "input": "370",
+            "expected": "True",
+            "actual": "Input n: False",
+            "passed": false
+          }
+        ]
+      },
+      "output": {
+        "rubric": {
+          "compilable": 1,
+          "io_format": 1,
+          "logic": 2,
+          "edge_case": 1,
+          "complexity": 1,
+          "code_quality": 1
+        },
+        "total_score": 7
+      }
+    },
+    {
+      "sample_id": "EX02-S217",
+      "input": {
+        "exam_id": "EX02",
+        "exam_type": "single_problem",
+        "language": "cpp11",
+        "code_file": "submissions/EX02/EX02-S217.cpp",
+        "compile_log": "/tmp/tmpkr9hwqwv/student.cpp: In function ‘bool AmstrongNumber(unsigned int)’:\n/tmp/tmpkr9hwqwv/student.cpp:10:5: error: expected ‘,’ or ‘;’ before ‘int’\n   10 |     int Sohang = 0;\n      |     ^~~\n/tmp/tmpkr9hwqwv/student.cpp:12:9: error: ‘Sohang’ was not declared in this scope\n   12 |         Sohang = n%10;\n      |         ^~~~~~\n/tmp/tmpkr9hwqwv/student.cpp:18:20: error: ‘Sohang’ was not declared in this scope\n   18 |         Luythua *= Sohang;\n      |                    ^~~~~~\n/tmp/tmpkr9hwqwv/student.cpp:29:1: warning: no return statement in function returning non-void [-Wreturn-type]\n   29 | }\n      | ^",
+        "test_report": []
+      },
+      "output": {
+        "rubric": {
+          "compilable": 0,
+          "io_format": 0,
+          "logic": 0,
+          "edge_case": 0,
+          "complexity": 0,
+          "code_quality": 1
+        },
+        "total_score": 1
+      }
+    }
+  ]
+}

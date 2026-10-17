@@ -1,0 +1,7 @@
+torch==2.12.1
+transformers==5.12.1
+peft==0.21.2
+huggingface_hub==1.21.0
+scikit-learn==1.9.0
+numpy==2.3.5
+pytest
